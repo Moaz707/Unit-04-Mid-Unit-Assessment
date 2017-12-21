@@ -39,17 +39,10 @@ public class DisplayFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
 
-        TopFragment topFragment = new TopFragment();
-        FragmentManager manager = getActivity().getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.addToBackStack("").replace(R.id.top_fragment, topFragment).commit();
-
-
         BottomFragment bottomFragment = new BottomFragment();
         FragmentManager bottomManger = getActivity().getSupportFragmentManager();
         FragmentTransaction bottomTransaction = bottomManger.beginTransaction();
         bottomTransaction.addToBackStack("").replace(R.id.bottom_fragment, bottomFragment).commit();
-
 
     }
 }
